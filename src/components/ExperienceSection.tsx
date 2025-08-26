@@ -27,21 +27,21 @@ const ExperienceSection = () => {
   return (
     <section className="mb-6">
       <h2 className="section-title">Experience</h2>
-      <div className="space-y-4">
+      <div className="space-y-5">
         {experiences.map((exp, index) => (
-          <div key={index} className="experience-item">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="position-title">{exp.position}</h3>
-                <p className="company-title">{exp.company}</p>
+          <div key={index} className="experience-item bg-card border border-border rounded-lg p-5 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
+              <div className="flex-1">
+                <h3 className="position-title text-base font-semibold text-primary mb-1">{exp.position}</h3>
+                <p className="company-title font-medium text-foreground">{exp.company}</p>
               </div>
-              <p className="date-range">{exp.duration}</p>
+              <p className="date-range bg-secondary px-3 py-1 rounded-md text-sm font-medium self-start">{exp.duration}</p>
             </div>
-            <ul className="space-y-1">
+            <ul className="space-y-2 pl-2">
               {exp.achievements.map((achievement, idx) => (
-                <li key={idx} className="achievement-bullet flex">
-                  <span className="text-primary mr-2">•</span>
-                  <span>{achievement}</span>
+                <li key={idx} className="achievement-bullet flex items-start gap-3">
+                  <span className="text-primary font-bold mt-1 text-sm">•</span>
+                  <span className="text-sm leading-relaxed">{achievement}</span>
                 </li>
               ))}
             </ul>

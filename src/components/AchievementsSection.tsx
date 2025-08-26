@@ -7,14 +7,13 @@ const AchievementsSection = () => {
   return (
     <section className="mb-4">
       <h2 className="section-title">Achievements and Awards</h2>
-      <ul className="space-y-1">
+      <div className="space-y-3">
         {achievements.map((achievement, index) => (
-          <li key={index} className="achievement-bullet flex">
-            <span className="text-primary mr-2">•</span>
-            <span>{achievement}</span>
-          </li>
+          <div key={index} className="bg-accent/10 border-l-4 border-l-primary p-4 rounded-r-lg">
+            <p className="achievement-bullet text-sm leading-relaxed text-foreground">{achievement}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
